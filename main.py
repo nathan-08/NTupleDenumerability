@@ -1,5 +1,5 @@
 '''Demonstration of the denumerability of the set of n-tuples of natural numbers for a fixed n'''
-'''that is, there exists a one-to-one mapping from (N^n -> N) for any finite n'''
+'''that is, there exists a one-to-one mapping (N^n -> N) for any finite n'''
 
 def f2(n, m):
     '''N^2 -> N'''
@@ -31,9 +31,9 @@ def fNinv(n, a):
     while len(nums) < n:
         (x,y) = f2inv(nums.pop())
         nums.append(x)
-        nums.append(y)
+        nums.append(int(y))
     return nums
 
-for i in range(1, 20):
-    print(f'{i}:'.ljust(5) + f'{fNinv(5, i)}')
+for i in range(1, 30):
+    print(f'{i}'.ljust(3) + f'-> {fNinv(5, i)}')
 
